@@ -1,0 +1,37 @@
+- form_tag({:action => :create}, :id => :create) do
+  =hidden_field :answer_profile, :questionnarie_id
+
+  %table#questionnarie
+    %tr
+      %th タイトル
+      %td#title=@questionnarie.title
+    %tr
+      %th 説明
+      %td#description=@questionnarie.description
+    %tr
+      %th 回答期限
+      %td#limit=@questionnarie.limit
+
+  %table#answer_profile
+    %tr
+      %th 回答を質問者以外にも公開していいですか？
+      %td#publication
+        %label
+          = radio_button :answer_profile, :publication, "private"
+          質問者のみ
+        %label
+          = radio_button :answer_profile, :publication, "public"
+          誰でも見られる
+
+    -@questionnarie.questions.each_with_index do |q,i|
+      =hidden_field_tag "answer_item_#{i}[question_id]", q.id
+      %table#answer_items
+        %tr
+          %th#order= "[#{q.order}]#{q.sentences}"
+        %tr
+          %td#answer_detail= text_area_tag "answer_item_#{i}[answer_detail]", "", :size => "20", :id =>"answer_#{i}_answer_detail"
+
+  = submit_tag "登録" #, :disable_with => "登録中..."
+
+
+

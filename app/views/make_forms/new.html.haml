@@ -1,0 +1,24 @@
+- form_tag({:action => :create_questionnarie}, :id => :create) do
+  %table#questionnarie
+    %tr
+      %th タイトル
+      %td#title= text_field :questionnarie, :title, :size => "40"
+    %tr
+      %th 説明
+      %td#description= text_area :questionnarie, :description, :size => "40x5"
+    %tr
+      %th 回答期限
+      %td#limit= text_field :questionnarie, :limit, :size => "40"
+    %tr
+      %th 回答公開範囲
+      %td#publication
+        %label
+          = radio_button :questionnarie, :publication, "private"
+          指定した人のみ
+        %label
+          = radio_button :questionnarie, :publication, "public"
+          誰でも見られる
+    %tr
+      %th 備考
+      %td#note= text_area :questionnarie, :note, {:cols => 40, :rows => 5}
+  = submit_tag "登録", :disable_with => "登録中..."

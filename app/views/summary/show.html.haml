@@ -1,0 +1,45 @@
+%h2 アンケートプロフィール 
+= link_to '編集', :controller => :make_forms, :action => :edit, :id => "#{@questionnarie.id}"
+%table#questionnarie
+  %tr
+    %th#title タイトル
+    %td#title=@questionnarie.title
+  %tr
+    %th#description 説明
+    %td#description=@questionnarie.description
+  %tr
+    %th#limit 回答期限
+    %td#limit=@questionnarie.limit
+  %tr
+    %th#publicationb 回答公開範囲
+    %td#publicationb=@questionnarie.publication
+
+
+%h2 回答サマリ
+%table#questions
+  %tr
+    %th#order No
+    %th#sentences 質問文
+    %th#need 必須
+    %th#count 回答数
+    %th#action アクション
+  -@questionnarie.questions.each do |q|
+    %tr
+      %td#order=q.order
+      %td#sentences=q.sentences
+      %td#need=q.need
+      %td#count=q.answer_items.size
+      %td#edit=link_to '編集', :controller => :make_forms, :action => :edit_question, :id => "#{q.id}"
+
+
+%h2 回答詳細
+%table#answer_items
+  %tr
+    %th#date 日付
+    -@questionnarie.questions.each_with_index do |q, i|
+      %th="#{(i+1).to_s}:#{q.sentences}"
+  -@questionnarie.answer_profiles.each do |a|
+    %tr
+      %td#date=a.created_at.strftime("%Y/%m/%d")
+      -a.answer_items.size.times do |i|
+        %td#answer_detail=a.hashed_answer_items[i+1].answer_detail

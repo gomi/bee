@@ -1,0 +1,38 @@
+%table#questions
+  %tr
+    %th タイトル
+    %td#title=@questionnarie.title
+  %tr
+    %th 説明
+    %td#description=@questionnarie.description
+  %tr
+    %th 回答期限
+    %td#limit=@questionnarie.limit
+  %tr
+    %th 回答公開範囲
+    %td#publication=@questionnarie.publication
+  %tr
+    %th 備考
+    %td#note= @questionnarie.note
+
+- form_tag({:action => :create_questions}, :id => :create) do
+  =hidden_field_tag 'questionnarie_id', @questionnarie.id
+  -@questions.each_with_index do |q,i|
+    %table#questions
+      %tr
+        %th No
+        %td#order= text_field_tag "question_#{i}[order]", q.order, :size => "5", :id =>"question_#{i}_order"
+      %tr
+        %th 質問文
+        %td#sentences= text_area_tag "question_#{i}[sentences]", q.sentences, :size => "40x5", :id =>"question_#{i}_sentences"
+      %tr
+       
+        %th 必須
+        %td#need
+          %label
+            = check_box_tag "question_#{i}[need]", "true", q.need, :id =>"question_#{i}_need"
+
+  = submit_tag "登録", :disable_with => "登録中..."
+
+
+

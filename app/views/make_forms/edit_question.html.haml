@@ -1,0 +1,35 @@
+%h2 質問の編集
+- form_tag({:action => :update_question}, :id => :update) do
+  =hidden_field :question, :id
+  %table#questionnarie
+    %tr
+      %td
+        %h3 アンケートプロフィール
+    %tr
+      %th タイトル
+      %td#title=@question.questionnarie.title
+    %tr
+      %th 説明
+      %td#description=@question.questionnarie.description
+    %tr
+      %th 回答期限
+      %td#limit=@question.questionnarie.limit
+  %table#question
+    %tr
+      %td
+        %h3 質問
+    %tr
+      %th#sentences No
+      %th#order= text_field :question, :order
+    %tr
+      %th#sentences 質問文
+      %td#sentences= text_field :question, :sentences
+    %tr
+      %th 必須
+      %td#need
+        %label
+          = check_box :question, :need
+  = submit_tag "登録" #, :disable_with => "登録中..."
+
+
+

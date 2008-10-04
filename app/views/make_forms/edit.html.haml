@@ -1,0 +1,28 @@
+/ kyuumin create
+- form_tag({:action => :update_questions}, :id => :update) do
+  =hidden_field_tag 'questionnarie_id', @questionnarie.id
+
+  %h2 アンケートプロフィール
+  %table#questionnarie
+    %tr
+      %th#title タイトル
+      %td#title= text_field :questionnarie, :title, :size => "40"
+    %tr
+      %th#description 説明
+      %td#description= text_area :questionnarie, :description, :size => "40x5"
+    %tr
+      %th#limit 回答期限
+      %td#limit= text_field :questionnarie, :limit, :size => "40"
+    %tr
+      %th#publication 回答公開範囲
+      %td#publication
+        %label
+          = radio_button :questionnarie, :publication, "private"
+          指定した人のみ
+        %label
+          = radio_button :questionnarie, :publication, "public"
+          誰でも見られる
+    %tr
+      %th 備考
+      %td#note= text_area :questionnarie, :note, {:cols => 40, :rows => 5}
+  = submit_tag "更新", :disable_with => "更新中..."
