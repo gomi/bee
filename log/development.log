@@ -7263,3 +7263,508 @@ Rendering make_forms/edit_question
   [4;36;1mQuestionnarie Columns (0.002581)[0m   [0;1mSHOW FIELDS FROM `questionnaries`[0m
   [4;35;1mQuestionnarie Load (0.001100)[0m   [0mSELECT * FROM `questionnaries` WHERE (`questionnaries`.`id` = 2) [0m
 Completed in 0.04745 (21 reqs/sec) | Rendering: 0.02314 (48%) | DB: 0.00860 (18%) | 200 OK [http://localhost/make_forms/edit_question/4]
+WARNING: You're using the Ruby-based MySQL library that ships with Rails. This library is not suited for production. Please install the C-based MySQL library instead (gem install mysql).
+  [4;36;1mSQL (0.000247)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000216)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mQuestionnarie Columns (0.002617)[0m   [0;1mSHOW FIELDS FROM `questionnaries`[0m
+  [4;35;1mQuestionnarie Load (0.001298)[0m   [0mSELECT * FROM `questionnaries` WHERE (`questionnaries`.`id` = 1) [0m
+  [4;36;1mQuestionnarie Load (0.001325)[0m   [0;1mSELECT * FROM `questionnaries` WHERE (`questionnaries`.`id` = 9) [0m
+  [4;35;1mQuestionnarie Load (0.001293)[0m   [0mSELECT * FROM `questionnaries` WHERE (`questionnaries`.`id` = 9) LIMIT 1[0m
+  [4;36;1mQuestionnarie Load (0.001408)[0m   [0;1mSELECT * FROM `questionnaries` WHERE (`questionnaries`.`id` = 1) LIMIT 1[0m
+
+
+Processing SummaryController#index (for 127.0.0.1 at 2008-10-04 18:05:29) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlOTg4NzA3ZWRiMDgzNzE3OTFlOGMyZjM2YzNmOTcy%0AMDgiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--b736ed8869b746b372eda347d49778bde96f00f1
+  Parameters: {"action"=>"index", "controller"=>"summary"}
+WARNING: You're using the Ruby-based MySQL library that ships with Rails. This library is not suited for production. Please install the C-based MySQL library instead (gem install mysql).
+  [4;36;1mSQL (0.000180)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000172)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mQuestionnarie Load (0.000815)[0m   [0;1mSELECT * FROM `questionnaries` ORDER BY id ASC[0m
+Rendering template within layouts/layout
+Rendering summary/index
+  [4;35;1mQuestionnarie Columns (0.001644)[0m   [0mSHOW FIELDS FROM `questionnaries`[0m
+Completed in 0.02824 (35 reqs/sec) | Rendering: 0.01426 (50%) | DB: 0.00281 (9%) | 200 OK [http://localhost/summary]
+
+
+Processing SummaryController#show (for 127.0.0.1 at 2008-10-04 18:05:30) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlOTg4NzA3ZWRiMDgzNzE3OTFlOGMyZjM2YzNmOTcy%0AMDgiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--b736ed8869b746b372eda347d49778bde96f00f1
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"summary"}
+  [4;36;1mQuestionnarie Columns (0.001686)[0m   [0;1mSHOW FIELDS FROM `questionnaries`[0m
+  [4;35;1mQuestionnarie Load (0.000813)[0m   [0mSELECT * FROM `questionnaries` WHERE (`questionnaries`.`id` = 1) [0m
+Rendering template within layouts/layout
+Rendering summary/show
+  [4;36;1mQuestion Load (0.001308)[0m   [0;1mSELECT * FROM `questions` WHERE (questions.questionnarie_id = 1) [0m
+  [4;35;1mQuestion Columns (0.001861)[0m   [0mSHOW FIELDS FROM `questions`[0m
+  [4;36;1mAnswerItem Columns (0.001458)[0m   [0;1mSHOW FIELDS FROM `answer_items`[0m
+  [4;35;1mSQL (0.000289)[0m   [0mSELECT count(*) AS count_all FROM `answer_items` WHERE (answer_items.question_id = 1) [0m
+  [4;36;1mSQL (0.000289)[0m   [0;1mSELECT count(*) AS count_all FROM `answer_items` WHERE (answer_items.question_id = 2) [0m
+  [4;35;1mSQL (0.000271)[0m   [0mSELECT count(*) AS count_all FROM `answer_items` WHERE (answer_items.question_id = 3) [0m
+  [4;36;1mAnswerProfile Load (0.000653)[0m   [0;1mSELECT * FROM `answer_profiles` WHERE (answer_profiles.questionnarie_id = 1) [0m
+  [4;35;1mAnswerProfile Columns (0.001418)[0m   [0mSHOW FIELDS FROM `answer_profiles`[0m
+  [4;36;1mSQL (0.000312)[0m   [0;1mSELECT count(*) AS count_all FROM `answer_items` WHERE (answer_items.answer_profile_id = 1) [0m
+  [4;35;1mAnswerItem Load (0.000577)[0m   [0mSELECT * FROM `answer_items` WHERE (answer_items.answer_profile_id = 1) [0m
+  [4;36;1mQuestion Load (0.001054)[0m   [0;1mSELECT * FROM `questions` WHERE (`questions`.`id` = 1) [0m
+  [4;35;1mQuestion Load (0.000877)[0m   [0mSELECT * FROM `questions` WHERE (`questions`.`id` = 2) [0m
+  [4;36;1mQuestion Load (0.000844)[0m   [0;1mSELECT * FROM `questions` WHERE (`questions`.`id` = 3) [0m
+Completed in 0.07051 (14 reqs/sec) | Rendering: 0.04286 (60%) | DB: 0.01371 (19%) | 200 OK [http://localhost/summary/show/1]
+
+
+Processing MakeFormsController#edit_question (for 127.0.0.1 at 2008-10-04 18:05:32) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlOTg4NzA3ZWRiMDgzNzE3OTFlOGMyZjM2YzNmOTcy%0AMDgiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--b736ed8869b746b372eda347d49778bde96f00f1
+  Parameters: {"action"=>"edit_question", "id"=>"2", "controller"=>"make_forms"}
+  [4;35;1mQuestion Columns (0.002659)[0m   [0mSHOW FIELDS FROM `questions`[0m
+  [4;36;1mQuestion Load (0.001625)[0m   [0;1mSELECT * FROM `questions` WHERE (`questions`.`id` = '2') LIMIT 1[0m
+Rendering template within layouts/layout
+Rendering make_forms/edit_question
+  [4;35;1mQuestionnarie Columns (0.002456)[0m   [0mSHOW FIELDS FROM `questionnaries`[0m
+  [4;36;1mQuestionnarie Load (0.001089)[0m   [0;1mSELECT * FROM `questionnaries` WHERE (`questionnaries`.`id` = 1) [0m
+Completed in 0.05431 (18 reqs/sec) | Rendering: 0.03005 (55%) | DB: 0.00783 (14%) | 200 OK [http://localhost/make_forms/edit_question/2]
+
+
+Processing MakeFormsController#update_question (for 127.0.0.1 at 2008-10-04 18:05:33) [POST]
+  Session ID: BAh7BzoMY3NyZl9pZCIlOTg4NzA3ZWRiMDgzNzE3OTFlOGMyZjM2YzNmOTcy%0AMDgiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--b736ed8869b746b372eda347d49778bde96f00f1
+  Parameters: {"commit"=>"登録", "authenticity_token"=>"793f89d85b5ee0371fe7dad985889ea4f57c42cf", "action"=>"update_question", "question"=>{"need"=>"0", "order"=>"2", "id"=>"2", "sentences"=>"明日はどこいく？"}, "controller"=>"make_forms"}
+  [4;35;1mQuestion Columns (0.002451)[0m   [0mSHOW FIELDS FROM `questions`[0m
+  [4;36;1mQuestion Load (0.000803)[0m   [0;1mSELECT * FROM `questions` WHERE (`questions`.`id` = '2') LIMIT 1[0m
+WARNING: Can't mass-assign these protected attributes: id
+  [4;35;1mSQL (0.000205)[0m   [0mBEGIN[0m
+  [4;36;1mQuestion Update (0.000443)[0m   [0;1mUPDATE `questions` SET `created_at` = '2008-10-04 15:20:17', `order` = 2, `questionnarie_id` = 1, `sentences` = '明日はどこいく？', `updated_at` = '2008-10-04 18:05:33', `need` = 0 WHERE `id` = 2[0m
+  [4;35;1mSQL (0.053456)[0m   [0mCOMMIT[0m
+  [4;36;1mQuestionnarie Columns (0.001544)[0m   [0;1mSHOW FIELDS FROM `questionnaries`[0m
+  [4;35;1mQuestionnarie Load (0.000651)[0m   [0mSELECT * FROM `questionnaries` WHERE (`questionnaries`.`id` = 1) [0m
+Redirected to http://localhost:3000/summary/show/1
+Completed in 0.08345 (11 reqs/sec) | DB: 0.05955 (71%) | 302 Found [http://localhost/make_forms/update_question]
+
+
+Processing SummaryController#show (for 127.0.0.1 at 2008-10-04 18:05:34) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlOTg4NzA3ZWRiMDgzNzE3OTFlOGMyZjM2YzNmOTcy%0AMDgiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7BjoLbm90aWNlIibmm7TmlrDjgpLlj5fjgZHku5jjgZHjgb7jgZfjgZ%2Fj%0AgIIGOgpAdXNlZHsGOwdU--873ddd2c2d1f67112acd6ac88d85c0e71060d874
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"summary"}
+  [4;36;1mQuestionnarie Columns (0.001753)[0m   [0;1mSHOW FIELDS FROM `questionnaries`[0m
+  [4;35;1mQuestionnarie Load (0.000696)[0m   [0mSELECT * FROM `questionnaries` WHERE (`questionnaries`.`id` = 1) [0m
+Rendering template within layouts/layout
+Rendering summary/show
+  [4;36;1mQuestion Load (0.001177)[0m   [0;1mSELECT * FROM `questions` WHERE (questions.questionnarie_id = 1) [0m
+  [4;35;1mQuestion Columns (0.001588)[0m   [0mSHOW FIELDS FROM `questions`[0m
+  [4;36;1mAnswerItem Columns (0.001458)[0m   [0;1mSHOW FIELDS FROM `answer_items`[0m
+  [4;35;1mSQL (0.000296)[0m   [0mSELECT count(*) AS count_all FROM `answer_items` WHERE (answer_items.question_id = 1) [0m
+  [4;36;1mSQL (0.000304)[0m   [0;1mSELECT count(*) AS count_all FROM `answer_items` WHERE (answer_items.question_id = 2) [0m
+  [4;35;1mSQL (0.000353)[0m   [0mSELECT count(*) AS count_all FROM `answer_items` WHERE (answer_items.question_id = 3) [0m
+  [4;36;1mAnswerProfile Load (0.000906)[0m   [0;1mSELECT * FROM `answer_profiles` WHERE (answer_profiles.questionnarie_id = 1) [0m
+  [4;35;1mAnswerProfile Columns (0.001491)[0m   [0mSHOW FIELDS FROM `answer_profiles`[0m
+  [4;36;1mSQL (0.000338)[0m   [0;1mSELECT count(*) AS count_all FROM `answer_items` WHERE (answer_items.answer_profile_id = 1) [0m
+  [4;35;1mAnswerItem Load (0.000585)[0m   [0mSELECT * FROM `answer_items` WHERE (answer_items.answer_profile_id = 1) [0m
+  [4;36;1mQuestion Load (0.000957)[0m   [0;1mSELECT * FROM `questions` WHERE (`questions`.`id` = 1) [0m
+  [4;35;1mQuestion Load (0.000820)[0m   [0mSELECT * FROM `questions` WHERE (`questions`.`id` = 2) [0m
+  [4;36;1mQuestion Load (0.000819)[0m   [0;1mSELECT * FROM `questions` WHERE (`questions`.`id` = 3) [0m
+Completed in 0.05914 (16 reqs/sec) | Rendering: 0.03374 (57%) | DB: 0.01354 (22%) | 200 OK [http://localhost/summary/show/1]
+
+
+Processing SummaryController#show (for 127.0.0.1 at 2008-10-04 18:05:38) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlOTg4NzA3ZWRiMDgzNzE3OTFlOGMyZjM2YzNmOTcy%0AMDgiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--b736ed8869b746b372eda347d49778bde96f00f1
+  Parameters: {"action"=>"show", "id"=>"5", "controller"=>"summary"}
+  [4;35;1mQuestionnarie Columns (0.003286)[0m   [0mSHOW FIELDS FROM `questionnaries`[0m
+  [4;36;1mQuestionnarie Load (0.001348)[0m   [0;1mSELECT * FROM `questionnaries` WHERE (`questionnaries`.`id` = 5) [0m
+
+
+ActiveRecord::RecordNotFound (Couldn't find Questionnarie with ID=5):
+    /var/lib/gems/1.8/gems/activerecord-2.0.2/lib/active_record/base.rb:1267:in `find_one'
+    /var/lib/gems/1.8/gems/activerecord-2.0.2/lib/active_record/base.rb:1250:in `find_from_ids'
+    /var/lib/gems/1.8/gems/activerecord-2.0.2/lib/active_record/base.rb:504:in `find'
+    /app/controllers/summary_controller.rb:10:in `show'
+    /var/lib/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:1158:in `send'
+    /var/lib/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:1158:in `perform_action_without_filters'
+    /var/lib/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/filters.rb:697:in `call_filters'
+    /var/lib/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/filters.rb:689:in `perform_action_without_benchmark'
+    /var/lib/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /var/lib/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /var/lib/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/rescue.rb:199:in `perform_action_without_caching'
+    /var/lib/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/caching.rb:678:in `perform_action'
+    /var/lib/gems/1.8/gems/activerecord-2.0.2/lib/active_record/connection_adapters/abstract/query_cache.rb:33:in `cache'
+    /var/lib/gems/1.8/gems/activerecord-2.0.2/lib/active_record/query_cache.rb:8:in `cache'
+    /var/lib/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/caching.rb:677:in `perform_action'
+    /var/lib/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:524:in `send'
+    /var/lib/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:524:in `process_without_filters'
+    /var/lib/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/filters.rb:685:in `process_without_session_management_support'
+    /var/lib/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/session_management.rb:123:in `sass_old_process'
+    /vendor/plugins/haml/lib/sass/plugin/rails.rb:15:in `process'
+    /var/lib/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:388:in `process'
+    /var/lib/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:171:in `handle_request'
+    /var/lib/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:115:in `dispatch'
+    /var/lib/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:126:in `dispatch_cgi'
+    /var/lib/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:9:in `dispatch'
+    /var/lib/gems/1.8/gems/rails-2.0.2/lib/webrick_server.rb:112:in `handle_dispatch'
+    /var/lib/gems/1.8/gems/rails-2.0.2/lib/webrick_server.rb:78:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    /var/lib/gems/1.8/gems/rails-2.0.2/lib/webrick_server.rb:62:in `dispatch'
+    /var/lib/gems/1.8/gems/rails-2.0.2/lib/commands/servers/webrick.rb:66
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    /var/lib/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:496:in `require'
+    /var/lib/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:342:in `new_constants_in'
+    /var/lib/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:496:in `require'
+    /var/lib/gems/1.8/gems/rails-2.0.2/lib/commands/server.rb:39
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    script/server:3
+
+Rendering /var/lib/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/templates/rescues/layout.erb (not_found)
+
+
+Processing MakeFormsController#edit_question (for 127.0.0.1 at 2008-10-04 18:05:54) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlOTg4NzA3ZWRiMDgzNzE3OTFlOGMyZjM2YzNmOTcy%0AMDgiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--b736ed8869b746b372eda347d49778bde96f00f1
+  Parameters: {"action"=>"edit_question", "id"=>"1", "controller"=>"make_forms"}
+  [4;35;1mQuestion Columns (0.002721)[0m   [0mSHOW FIELDS FROM `questions`[0m
+  [4;36;1mQuestion Load (0.001473)[0m   [0;1mSELECT * FROM `questions` WHERE (`questions`.`id` = '1') LIMIT 1[0m
+Rendering template within layouts/layout
+Rendering make_forms/edit_question
+  [4;35;1mQuestionnarie Columns (0.002762)[0m   [0mSHOW FIELDS FROM `questionnaries`[0m
+  [4;36;1mQuestionnarie Load (0.001126)[0m   [0;1mSELECT * FROM `questionnaries` WHERE (`questionnaries`.`id` = 1) [0m
+Completed in 0.04596 (21 reqs/sec) | Rendering: 0.02180 (47%) | DB: 0.01272 (27%) | 200 OK [http://localhost/make_forms/edit_question/1]
+
+
+Processing MakeFormsController#edit_question (for 127.0.0.1 at 2008-10-04 18:05:58) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlOTg4NzA3ZWRiMDgzNzE3OTFlOGMyZjM2YzNmOTcy%0AMDgiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--b736ed8869b746b372eda347d49778bde96f00f1
+  Parameters: {"action"=>"edit_question", "id"=>"4", "controller"=>"make_forms"}
+  [4;35;1mQuestion Columns (0.002157)[0m   [0mSHOW FIELDS FROM `questions`[0m
+  [4;36;1mQuestion Load (0.001147)[0m   [0;1mSELECT * FROM `questions` WHERE (`questions`.`id` = '4') LIMIT 1[0m
+Rendering template within layouts/layout
+Rendering make_forms/edit_question
+  [4;35;1mQuestionnarie Columns (0.001705)[0m   [0mSHOW FIELDS FROM `questionnaries`[0m
+  [4;36;1mQuestionnarie Load (0.000723)[0m   [0;1mSELECT * FROM `questionnaries` WHERE (`questionnaries`.`id` = 2) [0m
+Completed in 0.13469 (7 reqs/sec) | Rendering: 0.01736 (12%) | DB: 0.00573 (4%) | 200 OK [http://localhost/make_forms/edit_question/4]
+
+
+Processing MakeFormsController#edit_question (for 127.0.0.1 at 2008-10-04 18:06:02) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlOTg4NzA3ZWRiMDgzNzE3OTFlOGMyZjM2YzNmOTcy%0AMDgiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--b736ed8869b746b372eda347d49778bde96f00f1
+  Parameters: {"action"=>"edit_question", "id"=>"7", "controller"=>"make_forms"}
+  [4;35;1mQuestion Columns (0.003027)[0m   [0mSHOW FIELDS FROM `questions`[0m
+  [4;36;1mQuestion Load (0.001494)[0m   [0;1mSELECT * FROM `questions` WHERE (`questions`.`id` = '7') LIMIT 1[0m
+Redirected to http://localhost:3000/
+Filter chain halted as [#<ActionController::Filters::ClassMethods::SymbolFilter:0xb746550c @filter=:validate_question_exist>] rendered_or_redirected.
+Completed in 0.01642 (60 reqs/sec) | DB: 0.00452 (27%) | 302 Found [http://localhost/make_forms/edit_question/7]
+
+
+Processing MakeFormsController#edit_question (for 127.0.0.1 at 2008-10-04 18:06:15) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlOTg4NzA3ZWRiMDgzNzE3OTFlOGMyZjM2YzNmOTcy%0AMDgiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7BjoMd2FybmluZyI15oyH5a6a44GV44KM44Gf44Oa44O844K444Gv5a2Y%0A5Zyo44GX44G%2B44Gb44KT44CCBjoKQHVzZWR7BjsHVA%3D%3D--205d2cbd1cc78bed466009f59d9de3bdb9bb4fb8
+  Parameters: {"action"=>"edit_question", "id"=>"8", "controller"=>"make_forms"}
+  [4;35;1mQuestion Columns (0.002894)[0m   [0mSHOW FIELDS FROM `questions`[0m
+  [4;36;1mQuestion Load (0.001465)[0m   [0;1mSELECT * FROM `questions` WHERE (`questions`.`id` = '8') LIMIT 1[0m
+Redirected to http://localhost:3000/
+Filter chain halted as [#<ActionController::Filters::ClassMethods::SymbolFilter:0xb737d784 @filter=:validate_question_exist>] rendered_or_redirected.
+Completed in 0.01623 (61 reqs/sec) | DB: 0.00436 (26%) | 302 Found [http://localhost/make_forms/edit_question/8]
+
+
+Processing MakeFormsController#edit_question (for 127.0.0.1 at 2008-10-04 18:06:25) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlOTg4NzA3ZWRiMDgzNzE3OTFlOGMyZjM2YzNmOTcy%0AMDgiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7BjoMd2FybmluZyI15oyH5a6a44GV44KM44Gf44Oa44O844K444Gv5a2Y%0A5Zyo44GX44G%2B44Gb44KT44CCBjoKQHVzZWR7BjsHVA%3D%3D--205d2cbd1cc78bed466009f59d9de3bdb9bb4fb8
+  Parameters: {"action"=>"edit_question", "id"=>"3", "controller"=>"make_forms"}
+  [4;35;1mQuestion Columns (0.002716)[0m   [0mSHOW FIELDS FROM `questions`[0m
+  [4;36;1mQuestion Load (0.001483)[0m   [0;1mSELECT * FROM `questions` WHERE (`questions`.`id` = '3') LIMIT 1[0m
+Rendering template within layouts/layout
+Rendering make_forms/edit_question
+  [4;35;1mQuestionnarie Columns (0.002694)[0m   [0mSHOW FIELDS FROM `questionnaries`[0m
+  [4;36;1mQuestionnarie Load (0.001501)[0m   [0;1mSELECT * FROM `questionnaries` WHERE (`questionnaries`.`id` = 1) [0m
+Completed in 0.04678 (21 reqs/sec) | Rendering: 0.02209 (47%) | DB: 0.00839 (17%) | 200 OK [http://localhost/make_forms/edit_question/3]
+
+
+Processing MakeFormsController#update_questions (for 127.0.0.1 at 2008-10-04 18:06:39) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlOTg4NzA3ZWRiMDgzNzE3OTFlOGMyZjM2YzNmOTcy%0AMDgiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--b736ed8869b746b372eda347d49778bde96f00f1
+  Parameters: {"action"=>"update_questions", "id"=>"5", "controller"=>"make_forms"}
+
+
+ActionController::UnknownAction (No action responded to update_questions):
+    /var/lib/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/filters.rb:697:in `call_filters'
+    /var/lib/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/filters.rb:689:in `perform_action_without_benchmark'
+    /var/lib/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /var/lib/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /var/lib/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/rescue.rb:199:in `perform_action_without_caching'
+    /var/lib/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/caching.rb:678:in `perform_action'
+    /var/lib/gems/1.8/gems/activerecord-2.0.2/lib/active_record/connection_adapters/abstract/query_cache.rb:33:in `cache'
+    /var/lib/gems/1.8/gems/activerecord-2.0.2/lib/active_record/query_cache.rb:8:in `cache'
+    /var/lib/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/caching.rb:677:in `perform_action'
+    /var/lib/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:524:in `send'
+    /var/lib/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:524:in `process_without_filters'
+    /var/lib/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/filters.rb:685:in `process_without_session_management_support'
+    /var/lib/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/session_management.rb:123:in `sass_old_process'
+    /vendor/plugins/haml/lib/sass/plugin/rails.rb:15:in `process'
+    /var/lib/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:388:in `process'
+    /var/lib/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:171:in `handle_request'
+    /var/lib/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:115:in `dispatch'
+    /var/lib/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:126:in `dispatch_cgi'
+    /var/lib/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:9:in `dispatch'
+    /var/lib/gems/1.8/gems/rails-2.0.2/lib/webrick_server.rb:112:in `handle_dispatch'
+    /var/lib/gems/1.8/gems/rails-2.0.2/lib/webrick_server.rb:78:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    /var/lib/gems/1.8/gems/rails-2.0.2/lib/webrick_server.rb:62:in `dispatch'
+    /var/lib/gems/1.8/gems/rails-2.0.2/lib/commands/servers/webrick.rb:66
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    /var/lib/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:496:in `require'
+    /var/lib/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:342:in `new_constants_in'
+    /var/lib/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:496:in `require'
+    /var/lib/gems/1.8/gems/rails-2.0.2/lib/commands/server.rb:39
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    script/server:3
+
+Rendering /var/lib/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/templates/rescues/layout.erb (not_found)
+
+
+Processing MakeFormsController#finish (for 127.0.0.1 at 2008-10-04 18:06:48) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlOTg4NzA3ZWRiMDgzNzE3OTFlOGMyZjM2YzNmOTcy%0AMDgiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--b736ed8869b746b372eda347d49778bde96f00f1
+  Parameters: {"action"=>"finish", "controller"=>"make_forms"}
+  [4;35;1mQuestionnarie Columns (0.001799)[0m   [0mSHOW FIELDS FROM `questionnaries`[0m
+  [4;36;1mQuestionnarie Load (0.001044)[0m   [0;1mSELECT * FROM `questionnaries` WHERE (`questionnaries`.`id` IS NULL) LIMIT 1[0m
+Redirected to http://localhost:3000/
+Filter chain halted as [#<ActionController::Filters::ClassMethods::SymbolFilter:0xb76113d8 @filter=:validate_questionnarie_exist>] rendered_or_redirected.
+Completed in 0.01339 (74 reqs/sec) | DB: 0.00284 (21%) | 302 Found [http://localhost/make_forms/finish]
+
+
+Processing MakeFormsController#finish (for 127.0.0.1 at 2008-10-04 18:06:58) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlOTg4NzA3ZWRiMDgzNzE3OTFlOGMyZjM2YzNmOTcy%0AMDgiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7BjoMd2FybmluZyI15oyH5a6a44GV44KM44Gf44Oa44O844K444Gv5a2Y%0A5Zyo44GX44G%2B44Gb44KT44CCBjoKQHVzZWR7BjsHVA%3D%3D--205d2cbd1cc78bed466009f59d9de3bdb9bb4fb8
+  Parameters: {"action"=>"finish", "id"=>"4", "controller"=>"make_forms"}
+  [4;35;1mQuestionnarie Columns (0.002009)[0m   [0mSHOW FIELDS FROM `questionnaries`[0m
+  [4;36;1mQuestionnarie Load (0.000885)[0m   [0;1mSELECT * FROM `questionnaries` WHERE (`questionnaries`.`id` = '4') LIMIT 1[0m
+Redirected to http://localhost:3000/
+Filter chain halted as [#<ActionController::Filters::ClassMethods::SymbolFilter:0xb7511d34 @filter=:validate_questionnarie_exist>] rendered_or_redirected.
+Completed in 0.01116 (89 reqs/sec) | DB: 0.00289 (25%) | 302 Found [http://localhost/make_forms/finish/4]
+
+
+Processing SummaryController#index (for 127.0.0.1 at 2008-10-04 18:07:48) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlOTg4NzA3ZWRiMDgzNzE3OTFlOGMyZjM2YzNmOTcy%0AMDgiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7BjoMd2FybmluZyI15oyH5a6a44GV44KM44Gf44Oa44O844K444Gv5a2Y%0A5Zyo44GX44G%2B44Gb44KT44CCBjoKQHVzZWR7BjsHVA%3D%3D--205d2cbd1cc78bed466009f59d9de3bdb9bb4fb8
+  Parameters: {"action"=>"index", "controller"=>"summary"}
+  [4;35;1mQuestionnarie Load (0.001593)[0m   [0mSELECT * FROM `questionnaries` ORDER BY id ASC[0m
+Rendering template within layouts/layout
+Rendering summary/index
+  [4;36;1mQuestionnarie Columns (0.002575)[0m   [0;1mSHOW FIELDS FROM `questionnaries`[0m
+Completed in 0.02947 (33 reqs/sec) | Rendering: 0.00808 (27%) | DB: 0.00417 (14%) | 200 OK [http://localhost/summary]
+
+
+Processing SummaryController#show (for 127.0.0.1 at 2008-10-04 18:07:51) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlOTg4NzA3ZWRiMDgzNzE3OTFlOGMyZjM2YzNmOTcy%0AMDgiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--b736ed8869b746b372eda347d49778bde96f00f1
+  Parameters: {"action"=>"show", "id"=>"2", "controller"=>"summary"}
+  [4;35;1mQuestionnarie Columns (0.002623)[0m   [0mSHOW FIELDS FROM `questionnaries`[0m
+  [4;36;1mQuestionnarie Load (0.001101)[0m   [0;1mSELECT * FROM `questionnaries` WHERE (`questionnaries`.`id` = 2) [0m
+Rendering template within layouts/layout
+Rendering summary/show
+  [4;35;1mQuestion Load (0.001250)[0m   [0mSELECT * FROM `questions` WHERE (questions.questionnarie_id = 2) [0m
+  [4;36;1mQuestion Columns (0.001734)[0m   [0;1mSHOW FIELDS FROM `questions`[0m
+  [4;35;1mAnswerItem Columns (0.001570)[0m   [0mSHOW FIELDS FROM `answer_items`[0m
+  [4;36;1mSQL (0.000299)[0m   [0;1mSELECT count(*) AS count_all FROM `answer_items` WHERE (answer_items.question_id = 4) [0m
+  [4;35;1mAnswerProfile Load (0.000803)[0m   [0mSELECT * FROM `answer_profiles` WHERE (answer_profiles.questionnarie_id = 2) [0m
+Completed in 0.05292 (18 reqs/sec) | Rendering: 0.02801 (52%) | DB: 0.00938 (17%) | 200 OK [http://localhost/summary/show/2]
+
+
+Processing MakeFormsController#edit (for 127.0.0.1 at 2008-10-04 18:07:56) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlOTg4NzA3ZWRiMDgzNzE3OTFlOGMyZjM2YzNmOTcy%0AMDgiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--b736ed8869b746b372eda347d49778bde96f00f1
+  Parameters: {"action"=>"edit", "id"=>"2", "controller"=>"make_forms"}
+  [4;36;1mQuestionnarie Columns (0.002578)[0m   [0;1mSHOW FIELDS FROM `questionnaries`[0m
+  [4;35;1mQuestionnarie Load (0.001363)[0m   [0mSELECT * FROM `questionnaries` WHERE (`questionnaries`.`id` = '2') LIMIT 1[0m
+Rendering template within layouts/layout
+Rendering make_forms/edit
+Completed in 0.03568 (28 reqs/sec) | Rendering: 0.01599 (44%) | DB: 0.00394 (11%) | 200 OK [http://localhost/make_forms/edit/2]
+
+
+Processing MakeFormsController#edit (for 127.0.0.1 at 2008-10-04 18:08:00) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlOTg4NzA3ZWRiMDgzNzE3OTFlOGMyZjM2YzNmOTcy%0AMDgiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--b736ed8869b746b372eda347d49778bde96f00f1
+  Parameters: {"action"=>"edit", "id"=>"8", "controller"=>"make_forms"}
+  [4;36;1mQuestionnarie Columns (0.002726)[0m   [0;1mSHOW FIELDS FROM `questionnaries`[0m
+  [4;35;1mQuestionnarie Load (0.001051)[0m   [0mSELECT * FROM `questionnaries` WHERE (`questionnaries`.`id` = '8') LIMIT 1[0m
+Redirected to http://localhost:3000/
+Filter chain halted as [#<ActionController::Filters::ClassMethods::SymbolFilter:0xb7607d10 @filter=:validate_questionnarie_exist>] rendered_or_redirected.
+Completed in 0.10463 (9 reqs/sec) | DB: 0.00378 (3%) | 302 Found [http://localhost/make_forms/edit/8]
+
+
+Processing MakeFormsController#edit (for 127.0.0.1 at 2008-10-04 18:09:03) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlOTg4NzA3ZWRiMDgzNzE3OTFlOGMyZjM2YzNmOTcy%0AMDgiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7BjoMd2FybmluZyI15oyH5a6a44GV44KM44Gf44Oa44O844K444Gv5a2Y%0A5Zyo44GX44G%2B44Gb44KT44CCBjoKQHVzZWR7BjsHVA%3D%3D--205d2cbd1cc78bed466009f59d9de3bdb9bb4fb8
+  Parameters: {"action"=>"edit", "id"=>"2", "controller"=>"make_forms"}
+WARNING: You're using the Ruby-based MySQL library that ships with Rails. This library is not suited for production. Please install the C-based MySQL library instead (gem install mysql).
+  [4;36;1mSQL (0.000191)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000161)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mQuestionnarie Columns (0.001667)[0m   [0;1mSHOW FIELDS FROM `questionnaries`[0m
+  [4;35;1mQuestionnarie Load (0.000734)[0m   [0mSELECT * FROM `questionnaries` WHERE (`questionnaries`.`id` = '2') LIMIT 1[0m
+Rendering template within layouts/layout
+Rendering make_forms/edit
+Completed in 0.02926 (34 reqs/sec) | Rendering: 0.01510 (51%) | DB: 0.00275 (9%) | 200 OK [http://localhost/make_forms/edit/2]
+
+
+Processing MakeFormsController#edit (for 127.0.0.1 at 2008-10-04 18:09:07) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlOTg4NzA3ZWRiMDgzNzE3OTFlOGMyZjM2YzNmOTcy%0AMDgiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--b736ed8869b746b372eda347d49778bde96f00f1
+  Parameters: {"action"=>"edit", "id"=>"8", "controller"=>"make_forms"}
+  [4;36;1mQuestionnarie Columns (0.002442)[0m   [0;1mSHOW FIELDS FROM `questionnaries`[0m
+  [4;35;1mQuestionnarie Load (0.000703)[0m   [0mSELECT * FROM `questionnaries` WHERE (`questionnaries`.`id` = '8') LIMIT 1[0m
+Redirected to http://localhost:3000/summary
+Filter chain halted as [#<ActionController::Filters::ClassMethods::SymbolFilter:0xb7452448 @filter=:validate_questionnarie_exist>] rendered_or_redirected.
+Completed in 0.01557 (64 reqs/sec) | DB: 0.00314 (20%) | 302 Found [http://localhost/make_forms/edit/8]
+
+
+Processing SummaryController#index (for 127.0.0.1 at 2008-10-04 18:09:07) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlOTg4NzA3ZWRiMDgzNzE3OTFlOGMyZjM2YzNmOTcy%0AMDgiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7BjoMd2FybmluZyI15oyH5a6a44GV44KM44Gf44Oa44O844K444Gv5a2Y%0A5Zyo44GX44G%2B44Gb44KT44CCBjoKQHVzZWR7BjsHVA%3D%3D--205d2cbd1cc78bed466009f59d9de3bdb9bb4fb8
+  Parameters: {"action"=>"index", "controller"=>"summary"}
+  [4;36;1mQuestionnarie Load (0.000847)[0m   [0;1mSELECT * FROM `questionnaries` ORDER BY id ASC[0m
+Rendering template within layouts/layout
+Rendering summary/index
+  [4;35;1mQuestionnarie Columns (0.002040)[0m   [0mSHOW FIELDS FROM `questionnaries`[0m
+Completed in 0.02306 (43 reqs/sec) | Rendering: 0.00986 (42%) | DB: 0.00289 (12%) | 200 OK [http://localhost/summary]
+
+
+Processing SummaryController#show (for 127.0.0.1 at 2008-10-04 18:11:33) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlOTg4NzA3ZWRiMDgzNzE3OTFlOGMyZjM2YzNmOTcy%0AMDgiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--b736ed8869b746b372eda347d49778bde96f00f1
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"summary"}
+  [4;36;1mQuestionnarie Columns (0.003494)[0m   [0;1mSHOW FIELDS FROM `questionnaries`[0m
+  [4;35;1mQuestionnarie Load (0.001127)[0m   [0mSELECT * FROM `questionnaries` WHERE (`questionnaries`.`id` = 1) [0m
+Rendering template within layouts/layout
+Rendering summary/show
+  [4;36;1mQuestion Load (0.001722)[0m   [0;1mSELECT * FROM `questions` WHERE (questions.questionnarie_id = 1) [0m
+  [4;35;1mQuestion Columns (0.002653)[0m   [0mSHOW FIELDS FROM `questions`[0m
+  [4;36;1mAnswerItem Columns (0.002195)[0m   [0;1mSHOW FIELDS FROM `answer_items`[0m
+  [4;35;1mSQL (0.000497)[0m   [0mSELECT count(*) AS count_all FROM `answer_items` WHERE (answer_items.question_id = 1) [0m
+  [4;36;1mSQL (0.000477)[0m   [0;1mSELECT count(*) AS count_all FROM `answer_items` WHERE (answer_items.question_id = 2) [0m
+  [4;35;1mSQL (0.000451)[0m   [0mSELECT count(*) AS count_all FROM `answer_items` WHERE (answer_items.question_id = 3) [0m
+  [4;36;1mAnswerProfile Load (0.001126)[0m   [0;1mSELECT * FROM `answer_profiles` WHERE (answer_profiles.questionnarie_id = 1) [0m
+  [4;35;1mAnswerProfile Columns (0.002303)[0m   [0mSHOW FIELDS FROM `answer_profiles`[0m
+  [4;36;1mSQL (0.000355)[0m   [0;1mSELECT count(*) AS count_all FROM `answer_items` WHERE (answer_items.answer_profile_id = 1) [0m
+  [4;35;1mAnswerItem Load (0.000587)[0m   [0mSELECT * FROM `answer_items` WHERE (answer_items.answer_profile_id = 1) [0m
+  [4;36;1mQuestion Load (0.000762)[0m   [0;1mSELECT * FROM `questions` WHERE (`questions`.`id` = 1) [0m
+  [4;35;1mQuestion Load (0.000746)[0m   [0mSELECT * FROM `questions` WHERE (`questions`.`id` = 2) [0m
+  [4;36;1mQuestion Load (0.000726)[0m   [0;1mSELECT * FROM `questions` WHERE (`questions`.`id` = 3) [0m
+Completed in 0.09329 (10 reqs/sec) | Rendering: 0.05829 (62%) | DB: 0.01922 (20%) | 200 OK [http://localhost/summary/show/1]
+
+
+Processing MakeFormsController#edit (for 127.0.0.1 at 2008-10-04 18:11:36) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlOTg4NzA3ZWRiMDgzNzE3OTFlOGMyZjM2YzNmOTcy%0AMDgiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--b736ed8869b746b372eda347d49778bde96f00f1
+  Parameters: {"action"=>"edit", "id"=>"1", "controller"=>"make_forms"}
+  [4;35;1mQuestionnarie Columns (0.001732)[0m   [0mSHOW FIELDS FROM `questionnaries`[0m
+  [4;36;1mQuestionnarie Load (0.000919)[0m   [0;1mSELECT * FROM `questionnaries` WHERE (`questionnaries`.`id` = '1') LIMIT 1[0m
+Rendering template within layouts/layout
+Rendering make_forms/edit
+Completed in 0.08852 (11 reqs/sec) | Rendering: 0.00988 (11%) | DB: 0.00265 (2%) | 200 OK [http://localhost/make_forms/edit/1]
+
+
+Processing MakeFormsController#update_questionnarie (for 127.0.0.1 at 2008-10-04 18:11:40) [POST]
+  Session ID: BAh7BzoMY3NyZl9pZCIlOTg4NzA3ZWRiMDgzNzE3OTFlOGMyZjM2YzNmOTcy%0AMDgiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--b736ed8869b746b372eda347d49778bde96f00f1
+  Parameters: {"authenticity_token"=>"793f89d85b5ee0371fe7dad985889ea4f57c42cf", "action"=>"update_questionnarie", "controller"=>"make_forms", "questionnarie_id"=>"1", "questionnarie"=>{"title"=>"初めてのアンケート", "publication"=>"private", "description"=>"どきどき", "note"=>"aaa", "limit"=>"2008-10-15"}}
+  [4;35;1mQuestionnarie Columns (0.001726)[0m   [0mSHOW FIELDS FROM `questionnaries`[0m
+  [4;36;1mQuestionnarie Load (0.000673)[0m   [0;1mSELECT * FROM `questionnaries` WHERE (`questionnaries`.`id` = '1') LIMIT 1[0m
+  [4;35;1mSQL (0.000262)[0m   [0mBEGIN[0m
+  [4;36;1mQuestionnarie Update (0.000641)[0m   [0;1mUPDATE `questionnaries` SET `title` = '初めてのアンケート', `note` = 'aaa', `description` = 'どきどき', `limit` = '2008-10-15', `publication` = 'private' WHERE `id` = 1[0m
+  [4;35;1mSQL (0.007652)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/summary/show/1
+Completed in 0.03007 (33 reqs/sec) | DB: 0.01095 (36%) | 302 Found [http://localhost/make_forms/update_questionnarie]
+
+
+Processing SummaryController#show (for 127.0.0.1 at 2008-10-04 18:11:40) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlOTg4NzA3ZWRiMDgzNzE3OTFlOGMyZjM2YzNmOTcy%0AMDgiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7BjoLbm90aWNlIibmm7TmlrDjgpLlj5fjgZHku5jjgZHjgb7jgZfjgZ%2Fj%0AgIIGOgpAdXNlZHsGOwdU--873ddd2c2d1f67112acd6ac88d85c0e71060d874
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"summary"}
+  [4;36;1mQuestionnarie Columns (0.001705)[0m   [0;1mSHOW FIELDS FROM `questionnaries`[0m
+  [4;35;1mQuestionnarie Load (0.000869)[0m   [0mSELECT * FROM `questionnaries` WHERE (`questionnaries`.`id` = 1) [0m
+Rendering template within layouts/layout
+Rendering summary/show
+  [4;36;1mQuestion Load (0.000962)[0m   [0;1mSELECT * FROM `questions` WHERE (questions.questionnarie_id = 1) [0m
+  [4;35;1mQuestion Columns (0.002679)[0m   [0mSHOW FIELDS FROM `questions`[0m
+  [4;36;1mAnswerItem Columns (0.002237)[0m   [0;1mSHOW FIELDS FROM `answer_items`[0m
+  [4;35;1mSQL (0.000463)[0m   [0mSELECT count(*) AS count_all FROM `answer_items` WHERE (answer_items.question_id = 1) [0m
+  [4;36;1mSQL (0.000440)[0m   [0;1mSELECT count(*) AS count_all FROM `answer_items` WHERE (answer_items.question_id = 2) [0m
+  [4;35;1mSQL (0.000436)[0m   [0mSELECT count(*) AS count_all FROM `answer_items` WHERE (answer_items.question_id = 3) [0m
+  [4;36;1mAnswerProfile Load (0.001035)[0m   [0;1mSELECT * FROM `answer_profiles` WHERE (answer_profiles.questionnarie_id = 1) [0m
+  [4;35;1mAnswerProfile Columns (0.002218)[0m   [0mSHOW FIELDS FROM `answer_profiles`[0m
+  [4;36;1mSQL (0.000487)[0m   [0;1mSELECT count(*) AS count_all FROM `answer_items` WHERE (answer_items.answer_profile_id = 1) [0m
+  [4;35;1mAnswerItem Load (0.000943)[0m   [0mSELECT * FROM `answer_items` WHERE (answer_items.answer_profile_id = 1) [0m
+  [4;36;1mQuestion Load (0.001243)[0m   [0;1mSELECT * FROM `questions` WHERE (`questions`.`id` = 1) [0m
+  [4;35;1mQuestion Load (0.001222)[0m   [0mSELECT * FROM `questions` WHERE (`questions`.`id` = 2) [0m
+  [4;36;1mQuestion Load (0.001276)[0m   [0;1mSELECT * FROM `questions` WHERE (`questions`.`id` = 3) [0m
+Completed in 0.07345 (13 reqs/sec) | Rendering: 0.04579 (62%) | DB: 0.01821 (24%) | 200 OK [http://localhost/summary/show/1]
+
+
+Processing MakeFormsController#edit (for 127.0.0.1 at 2008-10-04 18:11:43) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlOTg4NzA3ZWRiMDgzNzE3OTFlOGMyZjM2YzNmOTcy%0AMDgiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--b736ed8869b746b372eda347d49778bde96f00f1
+  Parameters: {"action"=>"edit", "id"=>"1", "controller"=>"make_forms"}
+  [4;35;1mQuestionnarie Columns (0.002520)[0m   [0mSHOW FIELDS FROM `questionnaries`[0m
+  [4;36;1mQuestionnarie Load (0.001331)[0m   [0;1mSELECT * FROM `questionnaries` WHERE (`questionnaries`.`id` = '1') LIMIT 1[0m
+Rendering template within layouts/layout
+Rendering make_forms/edit
+Completed in 0.02944 (33 reqs/sec) | Rendering: 0.00880 (29%) | DB: 0.00385 (13%) | 200 OK [http://localhost/make_forms/edit/1]
+
+
+Processing MakeFormsController#update_questionnarie (for 127.0.0.1 at 2008-10-04 18:11:47) [POST]
+  Session ID: BAh7BzoMY3NyZl9pZCIlOTg4NzA3ZWRiMDgzNzE3OTFlOGMyZjM2YzNmOTcy%0AMDgiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--b736ed8869b746b372eda347d49778bde96f00f1
+  Parameters: {"authenticity_token"=>"793f89d85b5ee0371fe7dad985889ea4f57c42cf", "action"=>"update_questionnarie", "controller"=>"make_forms", "questionnarie_id"=>"1", "questionnarie"=>{"title"=>"初めてのアンケートff", "publication"=>"private", "description"=>"どきどき", "note"=>"aaa", "limit"=>"2008-10-15"}}
+  [4;35;1mQuestionnarie Columns (0.001701)[0m   [0mSHOW FIELDS FROM `questionnaries`[0m
+  [4;36;1mQuestionnarie Load (0.000695)[0m   [0;1mSELECT * FROM `questionnaries` WHERE (`questionnaries`.`id` = '1') LIMIT 1[0m
+  [4;35;1mSQL (0.000219)[0m   [0mBEGIN[0m
+  [4;36;1mQuestionnarie Update (0.000462)[0m   [0;1mUPDATE `questionnaries` SET `title` = '初めてのアンケートff', `note` = 'aaa', `description` = 'どきどき', `limit` = '2008-10-15', `publication` = 'private' WHERE `id` = 1[0m
+  [4;35;1mSQL (0.036946)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/summary/show/1
+Completed in 0.05578 (17 reqs/sec) | DB: 0.04002 (71%) | 302 Found [http://localhost/make_forms/update_questionnarie]
+
+
+Processing SummaryController#show (for 127.0.0.1 at 2008-10-04 18:11:47) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlOTg4NzA3ZWRiMDgzNzE3OTFlOGMyZjM2YzNmOTcy%0AMDgiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7BjoLbm90aWNlIibmm7TmlrDjgpLlj5fjgZHku5jjgZHjgb7jgZfjgZ%2Fj%0AgIIGOgpAdXNlZHsGOwdU--873ddd2c2d1f67112acd6ac88d85c0e71060d874
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"summary"}
+  [4;36;1mQuestionnarie Columns (0.002391)[0m   [0;1mSHOW FIELDS FROM `questionnaries`[0m
+  [4;35;1mQuestionnarie Load (0.001138)[0m   [0mSELECT * FROM `questionnaries` WHERE (`questionnaries`.`id` = 1) [0m
+Rendering template within layouts/layout
+Rendering summary/show
+  [4;36;1mQuestion Load (0.000970)[0m   [0;1mSELECT * FROM `questions` WHERE (questions.questionnarie_id = 1) [0m
+  [4;35;1mQuestion Columns (0.001633)[0m   [0mSHOW FIELDS FROM `questions`[0m
+  [4;36;1mAnswerItem Columns (0.001445)[0m   [0;1mSHOW FIELDS FROM `answer_items`[0m
+  [4;35;1mSQL (0.000325)[0m   [0mSELECT count(*) AS count_all FROM `answer_items` WHERE (answer_items.question_id = 1) [0m
+  [4;36;1mSQL (0.000306)[0m   [0;1mSELECT count(*) AS count_all FROM `answer_items` WHERE (answer_items.question_id = 2) [0m
+  [4;35;1mSQL (0.000286)[0m   [0mSELECT count(*) AS count_all FROM `answer_items` WHERE (answer_items.question_id = 3) [0m
+  [4;36;1mAnswerProfile Load (0.001002)[0m   [0;1mSELECT * FROM `answer_profiles` WHERE (answer_profiles.questionnarie_id = 1) [0m
+  [4;35;1mAnswerProfile Columns (0.002405)[0m   [0mSHOW FIELDS FROM `answer_profiles`[0m
+  [4;36;1mSQL (0.000375)[0m   [0;1mSELECT count(*) AS count_all FROM `answer_items` WHERE (answer_items.answer_profile_id = 1) [0m
+  [4;35;1mAnswerItem Load (0.000579)[0m   [0mSELECT * FROM `answer_items` WHERE (answer_items.answer_profile_id = 1) [0m
+  [4;36;1mQuestion Load (0.001195)[0m   [0;1mSELECT * FROM `questions` WHERE (`questions`.`id` = 1) [0m
+  [4;35;1mQuestion Load (0.001214)[0m   [0mSELECT * FROM `questions` WHERE (`questions`.`id` = 2) [0m
+  [4;36;1mQuestion Load (0.001206)[0m   [0;1mSELECT * FROM `questions` WHERE (`questions`.`id` = 3) [0m
+Completed in 0.06253 (15 reqs/sec) | Rendering: 0.03491 (55%) | DB: 0.01647 (26%) | 200 OK [http://localhost/summary/show/1]
+
+
+Processing MakeFormsController#edit (for 127.0.0.1 at 2008-10-04 18:11:49) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlOTg4NzA3ZWRiMDgzNzE3OTFlOGMyZjM2YzNmOTcy%0AMDgiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--b736ed8869b746b372eda347d49778bde96f00f1
+  Parameters: {"action"=>"edit", "id"=>"1", "controller"=>"make_forms"}
+  [4;35;1mQuestionnarie Columns (0.003133)[0m   [0mSHOW FIELDS FROM `questionnaries`[0m
+  [4;36;1mQuestionnarie Load (0.001429)[0m   [0;1mSELECT * FROM `questionnaries` WHERE (`questionnaries`.`id` = '1') LIMIT 1[0m
+Rendering template within layouts/layout
+Rendering make_forms/edit
+Completed in 0.03194 (31 reqs/sec) | Rendering: 0.00968 (30%) | DB: 0.00456 (14%) | 200 OK [http://localhost/make_forms/edit/1]
+
+
+Processing MakeFormsController#edit (for 127.0.0.1 at 2008-10-04 18:11:51) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlOTg4NzA3ZWRiMDgzNzE3OTFlOGMyZjM2YzNmOTcy%0AMDgiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--b736ed8869b746b372eda347d49778bde96f00f1
+  Parameters: {"action"=>"edit", "id"=>"9", "controller"=>"make_forms"}
+  [4;35;1mQuestionnarie Columns (0.002824)[0m   [0mSHOW FIELDS FROM `questionnaries`[0m
+  [4;36;1mQuestionnarie Load (0.001328)[0m   [0;1mSELECT * FROM `questionnaries` WHERE (`questionnaries`.`id` = '9') LIMIT 1[0m
+Redirected to http://localhost:3000/summary
+Filter chain halted as [#<ActionController::Filters::ClassMethods::SymbolFilter:0xb7307e08 @filter=:validate_questionnarie_exist>] rendered_or_redirected.
+Completed in 0.01934 (51 reqs/sec) | DB: 0.00415 (21%) | 302 Found [http://localhost/make_forms/edit/9]
+
+
+Processing SummaryController#index (for 127.0.0.1 at 2008-10-04 18:11:51) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlOTg4NzA3ZWRiMDgzNzE3OTFlOGMyZjM2YzNmOTcy%0AMDgiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7BjoMd2FybmluZyI15oyH5a6a44GV44KM44Gf44Oa44O844K444Gv5a2Y%0A5Zyo44GX44G%2B44Gb44KT44CCBjoKQHVzZWR7BjsHVA%3D%3D--205d2cbd1cc78bed466009f59d9de3bdb9bb4fb8
+  Parameters: {"action"=>"index", "controller"=>"summary"}
+  [4;35;1mQuestionnarie Load (0.000987)[0m   [0mSELECT * FROM `questionnaries` ORDER BY id ASC[0m
+Rendering template within layouts/layout
+Rendering summary/index
+  [4;36;1mQuestionnarie Columns (0.001545)[0m   [0;1mSHOW FIELDS FROM `questionnaries`[0m
+Completed in 0.01805 (55 reqs/sec) | Rendering: 0.00669 (37%) | DB: 0.00253 (14%) | 200 OK [http://localhost/summary]
