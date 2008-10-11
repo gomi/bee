@@ -12,13 +12,13 @@ class AnswerFormsController < ApplicationController
       end
     else
       flash.now[:warning] = "登録に失敗しました。入力しなおしてください。"
-      render :action => "new"    
+      render :action => "new"
     end
      redirect_to :action => :finish
   end
-  
+
   def finish
-    render :text => 'finsh!'    
+
   end
 
 end
